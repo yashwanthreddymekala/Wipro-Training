@@ -1,0 +1,173 @@
+QUESTION 1;-
+Do the following in sequence and record the results in a single program Create a list with 5 different types of fruits. Print the list. Add two more fruits to the list, then remove one fruit from it. Print the updated list. Access the second and fourth fruits in the list. Print them. Slice the list to get the first three fruits and print the result. Find and print the length of your list. 
+
+# Step 1: Create a list with 5 different types of fruits and print it
+fruits = ["apple", "banana", "cherry", "mango", "kiwi"]
+print("list of fruits:", fruits)
+
+# Step 2: Add two more fruits to the list, remove one, and print the updated list
+fruits.append("fig")
+fruits.append("grape")
+fruits.remove("mango")
+print("Updated list of fruits:", fruits)
+
+# Step 3: Access the second and fourth fruits in the list and print them
+second_fruit = fruits[1]  # Index 1
+fourth_fruit = fruits[3]  # Index 3
+print("Second fruit:", second_fruit)
+print("Fourth fruit:", fourth_fruit)
+
+# Step 4: Slice the list to get the first three fruits and print the result
+first_three_fruits = fruits[:3]
+print("First three fruits:", first_three_fruits)
+
+# Step 5: Find and print the length of the list
+length_of_list = len(fruits)
+print("Length of the list:", length_of_list)
+
+OUTPUT:-
+list of fruits: ['apple', 'banana', 'cherry', 'mango', 'kiwi']
+Updated list of fruits: ['apple', 'banana', 'cherry', 'kiwi', 'fig', 'grape']
+Second fruit: banana
+Fourth fruit: kiwi
+First three fruits: ['apple', 'banana', 'cherry']
+Length of the list: 6
+
+
+
+ 
+QUESTION 2:-
+
+
+Do the following in sequence and record the results in a single program Create a tuple with the names of 3 different cities you’d like to visit. Print the tuple.: Access and print the first and last elements of the tuple.: Create another tuple with 2 more cities. Concatenate both tuples and print the result. Try changing one element of the tuple. What happens? Unpack the elements of the tuple into separate variables and print them 
+
+
+
+
+cities = ("Paris", "Tokyo", "New York")
+print("Original tuple of cities:", cities)
+
+# Step 2: Access and print the first and last elements
+first_city = cities[0]
+last_city = cities[-1]
+print("First city:", first_city)
+print("Last city:", last_city)
+
+# Step 3: Create another tuple with 2 more cities, concatenate, and print
+more_cities = ("London", "Sydney")
+all_cities = cities + more_cities
+print("Concatenated tuple of cities:", all_cities)
+
+# Step 4: Try changing one element of the tuple 
+cities = ("Paris", "Tokyo", "New York")
+cities[1] = "Berlin" 
+
+
+# Step 5: Unpack the elements of the tuple into separate variables and print
+city1, city2, city3 = cities
+print("Unpacked cities:", city1, city2, city3)
+
+
+OUTPUT:-
+Original tuple of cities: ('Paris', 'Tokyo', 'New York')
+First city: Paris
+Last city: New York
+Concatenated tuple of cities: ('Paris', 'Tokyo', 'New York', 'London', 'Sydney')
+TypeError: 'tuple' object does not support item assignment 
+Unpacked cities: Paris Tokyo New York
+
+
+
+
+
+QUESTION 3:-
+
+Do the following in sequence and record the results in a single program Create a set of 5 unique colors. Print the set. Add a new color to the set, then try removing an existing color. Print the updated set. Create another set with 3 different colors. Find the intersection, union, and difference between both sets. Check if a specific color is in the set and print the result. Convert a list of fruits (with some duplicates) into a set and print the unique fruits. 
+
+
+
+
+
+
+
+
+
+# Step 1: Create a set of 5 unique colors and print it
+colors = {"red", "blue", "green", "yellow", "purple"}
+print("Original set of colors:", colors)
+
+
+
+# Step 2: Add a new color and remove an existing color
+colors.add("orange")      # Adding a new color
+colors.remove("blue")     # Removing an existing color
+print("Updated set of colors:", colors)
+
+# Step 3: Create another set and perform intersection, union, and difference
+more_colors = {"pink", "green", "black"}
+intersection = colors.intersection(more_colors)
+union =  colors.union(more_colors)
+difference = colors.difference(more_colors)
+print("Intersection:", intersection)
+print("Union:", union)
+print("Difference:", difference)
+
+# Step 4: Check if a specific color is in the set
+colors = {"red", "green", "yellow"}
+# Check if "red" is in the set
+print("red" in colors)
+
+# Step 5: Convert a list of fruits with duplicates into a set and print unique fruits
+fruits_list = ["apple", "banana", "apple", "cherry", "banana", "date"]
+unique_fruits = set(fruits_list)
+print("Unique fruits from the list:", unique_fruits)
+
+OUTPUT:-
+
+Original set of colors: {'green', 'blue', 'yellow', 'purple', 'red'}
+Updated set of colors: {'green', 'orange', 'yellow', 'purple', 'red'}
+Intersection: {'green'}
+Union: {'green', 'black', 'yellow', 'purple', 'orange', 'red', 'pink'}
+Difference: {'orange', 'red', 'yellow', 'purple'}
+True
+Unique fruits from the list: {'apple', 'date', 'cherry', 'banana'}
+
+
+
+QUESTION 4:-
+Do the following in sequence and record the results in a single program Create a dictionary with your name, age, and favorite hobby as keys, and provide appropriate values. Print the dictionary. Access and print the value associated with your name in the dictionary. Add a new key-value pair for your favorite food, then update the value for your favorite hobby. Print the updated dictionary. Print all the keys and all the values in the dictionary separately. Remove the age key-value pair from the dictionary. Print the dictionary to see the change. 
+
+
+
+
+# Step 1: Create a dictionary with name, age, and favorite hobby
+my_info = {
+    "name": "Alice",
+    "age": 25,
+    "favorite_hobby": "painting"
+}
+print("Original dictionary:", my_info)
+
+# Step 2: Access and print the value associated with the name
+print("Name:", my_info["name"])
+
+# Step 3: Add favorite food and update favorite hobby
+my_info["favorite_food"] = "pizza"           # Add new key-value pair
+my_info["favorite_hobby"] = "reading"       # Update existing value
+print("Updated dictionary:", my_info)
+
+# Step 4: Print all keys and all values separately
+print("Keys:", my_info.keys())
+print("Values:", my_info.values())
+
+# Step 5: Remove the age key-value pair and print the dictionary
+my_info.pop("age")
+print("Dictionary after removing age:", my_info)
+
+OUTPUT:-
+
+Name: Alice
+Updated dictionary: {'name': 'Alice', 'age': 25, 'favorite_hobby': 'reading', 'favorite_food': 'pizza'}
+Keys: dict_keys(['name', 'age', 'favorite_hobby', 'favorite_food'])
+Values: dict_values(['Alice', 25, 'reading', 'pizza'])
+Dictionary after removing age: {'name': 'Alice', 'favorite_hobby': 'reading', 'favorite_food': 'pizza'}

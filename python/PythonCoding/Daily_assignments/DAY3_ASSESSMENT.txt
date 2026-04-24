@@ -1,0 +1,417 @@
+QUESTION 1:-
+
+Do the following in a single program using built-in functions Take a list of numbers as input and print the largest and smallest numbers in the list. Take a string as input and print the length of the string. Take a list of names as input and print the list in alphabetical order. Take a list of numbers as input and print the total sum of the elements in the list. Takes a string as input and print the string in uppercase. 
+
+
+# 1. Largest and smallest numbers in a list
+numbers = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+print("Largest number:", max(numbers))
+print("Smallest number:", min(numbers))
+
+# 2. Length of a string
+string_input = input("Enter a string: ")
+print("Length of the string:", len(string_input))
+
+# 3. Alphabetical order of a list of names
+names = input("Enter a list of names separated by spaces: ").split()
+names.sort()
+print("Names in alphabetical order:", names)
+
+# 4. Sum of a list of numbers
+numbers2 = list(map(int, input("Enter another list of numbers separated by spaces: ").split()))
+print("Sum of the numbers:", sum(numbers2))
+
+# 5. String in uppercase
+string2 = input("Enter another string: ")
+print("Uppercase string:", string2.upper())
+
+OUTPUT:-
+
+Enter a list of numbers separated by spaces: 1 2 5 6
+Largest number: 6
+Smallest number: 1
+
+Enter a string: yashwanth
+Length of the string: 9
+
+Enter a list of names separated by spaces: yash pandu cherry
+Names in alphabetical order: ['cherry', 'pandu', 'yash']
+
+Enter another list of numbers separated by spaces: 1 3 5 7 8 
+Sum of the numbers: 24
+
+Enter another string: reddy
+Uppercase string: REDDY
+
+
+
+
+QUESTION 2:-
+
+Write a user-defined function factorial(n) that takes a positive integer n as an argument and returns its factorial. Use the function in a program and print the factorial of a given number. 
+
+
+
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+#driver
+num = int(input("Enter a positive integer: "))
+print(f"The factorial of {num} is {factorial(num)}.")
+
+OUTPUT:-
+
+Enter a positive integer: 5
+The factorial of 5 is 120.
+
+
+QUESTION 3:-
+
+
+Write a user-defined function "find_largest(a, b, c)" that takes three numbers as arguments and returns the largest of the three. Use the function in a program to find and print the largest of three given numbers. 
+
+
+def find_largest(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+#driver
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+largest = find_largest(num1, num2, num3)
+print(f"The largest number is {largest}.")
+OUTPUT:-
+Enter the first number: 6
+Enter the second number: 7
+Enter the third number: 5
+The largest number is 7.0.
+
+QUESTION 4:-
+Write a user-defined function greet(name) that takes a name as an argument and prints a greeting message like "Hello, [name]!" Use the function to greet the user with their name. 
+
+def greet(name):
+      print(f"Hello, {name}!")
+      user_name = input("Enter your name: ")
+greet(user_name)
+OUTPUT:-
+Enter your name: yashwanth
+Hello, yashwanth!
+
+
+QUESTION 5:-
+
+Combining Built-in and User-Defined Functions: Find the Average of a List: Write a user-defined function average(numbers) that takes a list of numbers as an argument and returns the average of the numbers. Call the function with a list of numbers and print the average. 
+
+
+def average(numbers):
+    return sum(numbers) / len(numbers)
+#driver
+numbers_list = list(map(float, input("Enter numbers separated by spaces: ").split()))
+avg = average(numbers_list)
+print(f"The average of the numbers is: {avg}")
+
+OUTPUT:-
+Enter numbers separated by spaces: 3 5 7
+The average of the numbers is: 5.0
+
+
+
+QUESTION 6:-
+
+Check Palindrome: Write a user-defined function is_palindrome(s) that takes a string as an argument and returns True if the string is a palindrome (reads the same forward and backward), and False otherwise. Test the function with different strings and print the results. 
+
+
+# Define the function to check palindrome
+def is_palindrome(s):
+    s = s.lower().replace(" ", "")
+    return s == s[::-1]
+#driver
+# Test the function with different strings
+test_strings = ["level", "Hello", "Racecar", "A man a plan a canal Panama"]
+for string in test_strings:
+    if is_palindrome(string):
+        print(f'"{string}" is a palindrome.')
+    else:
+        print(f'"{string}" is not a palindrome.')
+
+OUTPUT:-
+
+"level" is a palindrome.
+"Hello" is not a palindrome.
+"Racecar" is a palindrome.
+"A man a plan a canal Panama" is a palindrome.
+
+
+
+
+QUESTION 7:-
+
+Use the Math Module: Write a program that imports the math module and uses it to: Find the square root of a number. Calculate the sine of an angle . Find the greatest common divisor (GCD) of two numbers . 
+
+import math
+# 1. Find the square root of a number
+num = float(input("Enter a number to find its square root: "))
+sqrt_num = math.sqrt(num)
+print(f"The square root of {num} is {sqrt_num}")
+
+# 2. Calculate the sine of an angle (in degrees)
+angle_deg = float(input("Enter an angle in degrees to find its sine: "))
+angle_rad = math.radians(angle_deg)  
+sine_value = math.sin(angle_rad)
+print(f"The sine of {angle_deg}° is {sine_value}")
+
+# 3. Find the greatest common divisor (GCD) of two numbers
+a = int(input("Enter the first number to find GCD: "))
+b = int(input("Enter the second number to find GCD: "))
+gcd_value = math.gcd(a, b)
+print(f"The GCD of {a} and {b} is {gcd_value}")
+
+OUTPUT:-
+
+Enter a number to find its square root: 64
+
+The square root of 64.0 is 8.0
+
+Enter an angle in degrees to find its sine: 65
+
+The sine of 65.0° is 0.9063077870366499
+
+Enter the first number to find GCD: 5
+Enter the second number to find GCD: 4
+The GCD of 5 and 4 is 1
+
+
+
+
+QUESTION 8:-
+
+Use the Random Module: Write a program that imports the random module and uses it to: Generate and print a random integer between 1 and 100. Create a list of random numbers and print the list. Shuffle a list of numbers and print the shuffled list. 
+
+
+import random
+# 1. Generate and print a random integer between 1 and 100
+rand_int = random.randint(1, 100)
+print(f"Random integer between 1 and 100: {rand_int}")
+
+# 2. Create a list of 5 random integers between 1 and 50 and print the list
+rand_list = [random.randint(1, 50) for _ in range(5)]
+print(f"List of random numbers: {rand_list}")
+
+# 3. Shuffle a list of numbers and print the shuffled list
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+random.shuffle(numbers)
+print(f"Shuffled list: {numbers}")
+
+OUTPUT:-
+
+Random integer between 1 and 100: 21
+List of random numbers: [49, 22, 28, 11, 8]
+Shuffled list: [2, 10, 5, 7, 8, 6, 9, 1, 4, 3]
+
+
+
+
+
+
+
+QUESTION 9:-
+
+Use the Datetime Module: Write a program that imports the datetime module and uses it to: Get and print the current date and time . Calculate and print the number of days between two dates. Format and print the current date in the format "DD-MM-YYYY" 
+
+
+
+import datetime
+# 1. Get and print the current date and time
+current_datetime = datetime.datetime.now()
+print("Current date and time:", current_datetime)
+# 2. Calculate the number of days between two dates
+date1 = datetime.date(2024, 1, 1)  # Example: January 1, 2024
+date2 = datetime.date(2024, 4, 24)  
+delta = date2 - date1
+print(f"Number of days between {date1} and {date2}: {delta.days} days")
+# 3. Format and print the current date as "DD-MM-YYYY"
+formatted_date = current_datetime.strftime("%d-%m-%Y")
+print("Formatted current date:", formatted_date)
+
+OUTPUT:-
+
+Current date and time: 2026-04-24 17:48:03.330119
+Number of days between 2024-01-01 and 2024-04-24: 114 days
+Formatted current date: 24-04-2026
+
+
+
+QUESTION 10:-
+
+Use the OS Module: Write a program that imports the os module and uses it to: Print the current working directory Create a new directory and verify its existence. List all files and directories in the current directory 
+
+
+import os
+# 1. Print the current working directory
+cwd = os.getcwd()
+print("Current working directory:", cwd)
+
+# 2. Create a new directory and verify its existence
+new_dir = "my_new_directory"
+if not os.path.exists(new_dir):
+    os.mkdir(new_dir)
+    print(f"Directory '{new_dir}' created.")
+else:
+    print(f"Directory '{new_dir}' already exists.")
+
+# Verify existence
+if os.path.exists(new_dir):
+    print(f"Verified: '{new_dir}' exists.")
+# 3. List all files and directories in the current directory
+entries = os.listdir(cwd)
+print("Files and directories in the current directory:")
+for entry in entries:
+    print(entry)
+
+OUTPUT:-
+
+Current working directory: C:\Wipro Training\python\PythonCoding\Daily_assignments
+Directory 'my_new_directory' created.
+Verified: 'my_new_directory' exists.
+Files and directories in the current directory:
+assessment_1.py
+Assessment_1.txt
+Assessment_2.py
+ASSESSMENT_2.txt
+Day1_assessment.py
+DAY1_ASSESSMENT.txt
+DAY1_ASSESSMENTS.odt
+Day2_assessment1.py
+DAY2_ASSESSMENTS.odt
+DAY3_assessment.py
+my_new_directory
+New OpenDocument Text.odt
+
+
+QUESTION 11:-
+
+Create and Use a Custom Package: Create a package called my_math with two modules: arithmetic.py and geometry.py. In arithmetic.py, define functions for addition, subtraction, multiplication, and division. In geometry.py, define functions to calculate the area of a circle and the area of a rectangle. Write a program that imports these functions from the my_math package and uses them to perform various calculations. 
+
+
+Step 1: Create the package structure 
+
+my_math/
+│
+├── __init__.py
+├── arithmetic.py
+└── geometry.py
+# arithmetic.py
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+def multiply(a, b):
+    return a * b
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Error: Division by zero"
+
+# geometry.py
+import math
+def area_circle(radius):
+    return math.pi * radius ** 2
+def area_rectangle(length, width):
+    return length * width
+
+# main.py
+'''from my_math import add, subtract, multiply, divide, area_circle, area_rectangle
+print("Addition:", add(10, 5))
+print("Subtraction:", subtract(10, 5))
+print("Multiplication:", multiply(10, 5))
+print("Division:", divide(10, 5))
+print("Area of circle (radius 3):", area_circle(3))
+print("Area of rectangle (length 4, width 6):", area_rectangle(4, 6))
+# Arithmetic operations
+print("Addition:", add(10, 5))
+print("Subtraction:", subtract(10, 5))
+print("Multiplication:", multiply(10, 5))
+print("Division:", divide(10, 5))
+'''
+
+# Geometry calculations
+print("Area of circle (radius 3):", area_circle(3))
+print("Area of rectangle (length 4, width 6):", area_rectangle(4, 6))
+
+OUTPUT:-
+Area of circle (radius 3): 28.274333882308138
+Area of rectangle (length 4, width 6): 24
+
+
+
+
+QUESTION 12:-
+
+Create a Package for String Utilities: Create a package called string_utils with two modules: string_operations.py and string_validations.py. In string_operations.py, define functions for reversing a string, converting a string to uppercase, and finding the length of a string. In string_validations.py, define functions to check if a string is a palindrome and if it contains only alphabetic characters. Write a program that imports and uses these functions from the string_utils package. 
+
+project_folder/
+│
+├── string_utils/
+│   ├── __init__.py
+│   ├── string_operations.py
+│   └── string_validations.py
+└── main.py
+
+
+
+
+# string_operations.py
+def reverse_string(s):
+    return s[::-1]
+def to_uppercase(s):
+    return s.upper()
+def string_length(s):
+    return len(s)
+
+# string_validations.py
+
+def is_palindrome(s):
+    s_clean = s.lower().replace(" ", "")  # Ignore case and spaces
+    return s_clean == s_clean[::-1]
+
+def is_alpha(s):
+    return s.isalpha()
+
+'''# string_validations.py
+def is_palindrome(s):
+    s_clean = s.lower().replace(" ", "")  # Ignore case and spaces
+    return s_clean == s_clean[::-1]
+def is_alpha(s):
+    return s.isalpha()
+from .string_operations import reverse_string, to_uppercase, string_length
+from .string_validations import is_palindrome, is_alpha
+__all__ = [
+    "reverse_string", "to_uppercase", "string_length",
+    "is_palindrome", "is_alpha"
+]'''
+'''from string_utils import reverse_string, to_uppercase, string_length, is_palindrome, is_alpha
+
+# Sample string
+sample = "Racecar"
+print(f"Original string: {sample}")
+print(f"Reversed string: {reverse_string(sample)}")
+print(f"Uppercase string: {to_uppercase(sample)}")
+print(f"Length of string: {string_length(sample)}")
+print(f"Is palindrome: {is_palindrome(sample)}")
+print(f"Contains only alphabetic characters: {is_alpha(sample)}")'''
+
+OUTPUT:-
+
+Original string: Racecar
+Reversed string: racecaR
+Uppercase string: RACECAR
+Length of string: 7
+Is palindrome: True
+Contains only alphabetic characters: True 

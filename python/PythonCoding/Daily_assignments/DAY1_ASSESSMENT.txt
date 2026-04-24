@@ -1,0 +1,222 @@
+QUESTION 1:-
+1. Write a program that asks the user for their age and checks if they are eligible to vote (18 years and older). Print a message based on their eligibility.
+     
+
+      age = int(input("Enter your age: "))
+      # Check if the user is eligible to vote
+      if age >= 18:
+         print("You are eligible to vote.")
+      else:
+         print("You are not eligible to vote yet.")
+
+OUTPUT:-
+Enter your age: 19
+You are eligible to vote.
+
+
+QUESTION 2:-
+2. Write a program that takes a year as input and checks if it is a leap year or not. Print the result.
+
+year = int(input("Enter a year: "))
+      # Check if the year is a leap year
+      if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+          print(f"{year} is a leap year.")
+      else:
+          print(f"{year} is not a leap year.")
+OUTPUT:-
+Enter a year: 2008
+2008 is a leap year.
+
+QUESTION 3:-
+Write a program that takes a number as input and checks if it is divisible by 5. Print a message if it is divisible or not. 
+
+
+number = int(input("Enter a number: "))
+# Check divisibility by 5
+if number % 5 == 0:
+    print(f"{number} is divisible by 5.")
+else:
+    print(f"{number} is not divisible by 5.")
+OUTPUT:-
+Enter a number: 25
+25 is divisible by 5.
+
+
+
+QUESTION 4:-
+. Write a program that takes a character as input and checks if it is a vowel or consonant. Print the result. 
+
+char = input("Enter a character: ").lower()
+# Check if it's a vowel or consonant
+if char in "aeiou":
+    print(char, "is a vowel.")
+else:
+    print(char, "is a consonant.")
+OUTPUT:-
+
+Enter a character: i
+i is a vowel.
+
+
+QUESTION 5:-
+
+Write a program that takes a password as input and checks if it is strong (at least 8 characters). Print a message based on the result. 
+
+password = input("Enter your password: ")
+if len(password) >= 8:
+    print("Your password is strong.")
+else:
+    print("Your password is too short. It should be at least 8 characters.")
+
+OUTPUT:-
+Enter your password: yashwanthreddy
+Your password is strong.
+
+
+QUESTION 6:-
+Write a program that takes a grade (A, B, C, D, F) as input and uses match-case to print a message corresponding to the grade (e.g., "Excellent" for A, "Good" for B, etc.). 
+
+grade = input("Enter your grade (A, B, C, D, F): ").upper()
+match grade:
+    case "A":
+        print("Excellent")
+    case "B":
+        print("Good")
+    case "C":
+        print("Average")
+    case "D":
+        print("Below Average")
+    case "F":
+        print("Fail")
+    case _:
+        print("Invalid grade entered")
+ 
+OUTPUT:-
+Enter your grade (A, B, C, D, F): D
+Below Average
+
+
+QUESTION 7:-
+
+Write a program that takes a traffic light color (Red, Yellow, Green) as input and uses match-case to print the corresponding action (e.g., "Stop" for Red, "Wait" for Yellow, etc.). 
+
+color = input("Enter traffic light color (Red, Yellow, Green): ").capitalize()
+match color:
+    case "Red":
+        print("Stop")
+    case "Yellow":
+        print("Wait")
+    case "Green":
+        print("Go")
+    case _:
+        print("Invalid color entered")
+OUTPUT:-
+
+Enter traffic light color (Red, Yellow, Green): green
+Go
+
+
+QUESTION 8:-
+
+Write a program that takes a number as input and uses a for loop to calculate its factorial. Print the result. 
+
+
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(f"The factorial of {num} is {factorial}.")
+
+OUTPUT:-
+
+Enter a number: 8
+The factorial of 8 is 40320.
+
+
+
+
+
+
+QUESTION 9:-
+
+9. Write a program that uses a for loop to print all even numbers between 1 and 20. 
+
+for number in range(1, 21):
+    if number % 2 == 0:  
+        print(number)
+OUTPUT:-
+
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+
+
+QUESTION 10:-
+
+Write a program that uses a while loop to create a countdown timer from 10 to 0. Print each number. 
+
+
+count = 10
+while count >= 0:
+    print(count)
+    count -= 1  
+OUTPUT:-
+
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+
+
+
+
+
+QUESTION 11:-
+
+Write a program that uses a for loop to count the number of vowels in a given string. Print the count. 
+
+text = input("Enter a string: ").lower()
+vowel_count = 0
+for char in text:
+    if char in "aeiou":
+        vowel_count += 1
+print(f"The number of vowels in the string is: {vowel_count}")
+
+OUTPUT:-
+Enter a string: apple
+The number of vowels in the string is: 2
+
+
+QUESTION 12:-
+
+. Write a program that uses a for loop to print numbers from 1 to 10, but skips printing the number 5 (use continue) and stops the loop if the number 8 is reached (use break). 
+
+for number in range(1, 11):
+    if number == 5:
+        continue
+    if number == 8:
+        break
+    print(number)
+OUTPUT:-
+
+1
+2
+3
+4
+6
+7
